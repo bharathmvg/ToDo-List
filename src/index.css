@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	min-height: 100vh;
+	font-family: "Lato", sans-serif;
+	background-color: rgba(128, 128, 128, 0.137);
+}
+
+.App {
+	max-width: 600px;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	border: 3px solid #0055ffbd;
+	background-color: #fff;
+}
+
+header,
+footer {
+	font-size: 22px;
+	text-align: center;
+	padding: 10px;
+	color: #fff;
+	background-color: #0055ffbd;
+	letter-spacing: 0.5px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+
+main {
+	flex-grow: 1;
+	overflow-y: auto;
+}
+
+.items {
+	width: 100%;
+	list-style: none;
+}
+
+.item {
+	background-color: rgba(128, 128, 128, 0.183);
+	padding: 10px;
+	margin: 10px;
+	border-radius: 5px;
+
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+}
+
+.item input[type="checkbox"] {
+	min-width: 35px;
+	width: 35px;
+	min-height: 35px;
+	height: 35px;
+	margin-right: 10px;
+}
+
+.item label {
+	flex-grow: 1;
+}
+
+.item input[type="checkbox"]:focus + label {
+	text-decoration: underline;
+}
+
+.item svg {
+	font-size: 28px;
+	color: rgba(255, 0, 0, 0.422);
+	cursor: pointer;
+}
+
+.item svg:hover,
+.item svg:active,
+.item svg:focus {
+	color: rgba(255, 0, 0, 0.699);
+	transition: 0.3s;
+	outline: none;
+}
+
+.item:first-child {
+	margin-top: 0;
+}
+
+.addForm {
+	width: 100%;
+	padding: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.addForm input[type="text"] {
+	height: 40px;
+	font-size: 16px;
+	flex-grow: 1;
+	margin-right: 5px;
+	padding-left: 10px;
+	outline: none;
+}
+
+button {
+	width: 40px;
+	height: 40px;
+	font-size: 20px;
+	color: white;
+	background-color: #0055ffaf;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button:hover,
+button:active {
+	background-color: #0055ffbd;
+	transition: 0.3s;
+}
+
+.searchForm {
+	width: 100%;
+	padding: 10px 10px 0 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.searchForm input[type="text"] {
+	height: 40px;
+	font-size: 16px;
+	flex-grow: 1;
+	margin-right: 5px;
+	padding-left: 10px;
+	outline: none;
+}
+
+/* button {
+	outline: none;
+	width: 50px;
+} */
