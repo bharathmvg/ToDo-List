@@ -9,7 +9,7 @@ const AddItem = ({ items, setItems }) => {
     const newItem = { id, checked: false, desc };
     const listItems = [...items, newItem];
     setItems(listItems);
-    // localStorage.setItem("todoList", JSON.stringify(listItems));
+    localStorage.setItem("todoList", JSON.stringify(listItems));
   };
 
   const handleSubmit = () => {

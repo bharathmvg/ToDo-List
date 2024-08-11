@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Header, Footer } from "./components/Layout";
 import Main from "./components/Main";
 import AddItem from "./components/AddItem";
@@ -6,10 +6,9 @@ import SearchItem from "./components/SearchItem";
 
 const App = () => {
   const [items, setItems] = useState(
-    // JSON.parse(localStorage.getItem("todoList"))
-    []
+    JSON.parse(localStorage.getItem("todoList"))
   );
-
+  
   const [search, setSearch] = useState("");
 
   return (
