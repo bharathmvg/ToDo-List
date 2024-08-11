@@ -5,7 +5,7 @@ const AddItem = ({ items, setItems }) => {
   const [newItem, setNewItem] = useState("");
 
   const addItem = (desc) => {
-    const id = items.length === 0 ? "1" : items[items.length - 1].id + 1;
+    const id = items.length === 0 ? "1" : String(Number(items[items.length - 1].id) + 1);
     const newItem = { id, checked: false, desc };
     const listItems = [...items, newItem];
     setItems(listItems);
