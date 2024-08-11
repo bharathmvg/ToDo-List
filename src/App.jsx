@@ -5,9 +5,14 @@ import AddItem from "./components/AddItem";
 import SearchItem from "./components/SearchItem";
 
 const App = () => {
-  const [items, setItems] = useState(
-    JSON.parse(localStorage.getItem("todoList"))
-  );
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    const storedArray = JSON.parse(localStorage.getItem("todoList"));
+    if (storedArray) {
+      setItems(storedArray);
+    }
+  }, []);
   
   const [search, setSearch] = useState("");
 
