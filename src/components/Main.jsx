@@ -6,13 +6,13 @@ const Main = ({ items, setItems }) => {
       item.id === id ? { ...item, checked: !item.checked } : item
     );
     setItems(listItems);
-    localStorage.setItem("todoList", JSON.stringify(listItems));
+    // localStorage.setItem("todoList", JSON.stringify(listItems));
   };
 
   const handleDelete = (id) => {
     const listItems = items.filter((item) => item.id !== id);
     setItems(listItems);
-    localStorage.setItem("todoList", JSON.stringify(listItems));
+    // localStorage.setItem("todoList", JSON.stringify(listItems));
   };
 
   return (

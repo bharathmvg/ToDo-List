@@ -6,7 +6,8 @@ import SearchItem from "./components/SearchItem";
 
 const App = () => {
   const [items, setItems] = useState(
-    JSON.parse(localStorage.getItem("todoList"))
+    // JSON.parse(localStorage.getItem("todoList"))
+    []
   );
 
   const [search, setSearch] = useState("");
